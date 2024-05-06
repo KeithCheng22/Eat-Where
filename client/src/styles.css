@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to top right, #A87676, #cb8282);
+}
+
+
+.fadeIn-enter-active {
+  transition: opacity 2000ms ease-out, transform 2000ms ease-out;
+}
+
+.fadeIn-enter-from {
+  opacity: 0;
+  transform: translateY(300px);
+}
+
+.fadeIn-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
+.fadeOut-enter-active {
+  transition: opacity 1s ease-out, transform 1000ms ease-out;
+}
+
+.fadeOut-leave-active {
+  transition: opacity 1s ease-in, transform 1000ms ease-in;
+}
+
+.fadeOut-leave-to,
+.fadeOut-enter-from {
+  opacity: 0;
+  transform: translateY(-1000px);
+}
+
+.fadeOut-enter-to {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.or {
+  overflow: hidden;
+  text-align: center;
+}
+
+.or::before,
+.or::after {
+  background-color: #ffffff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.or::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.or::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+.info {
+  position: relative;
+  width: fit-content;
+}
+
+.info::before{
+  content: '';
+  position: absolute;
+  background-color: white;
+  width: 15px;
+  height: 2px;
+  top: 22px;
+  transition: width 300ms;
+}
+
+.info:hover::before {
+  width: 100%
+}
