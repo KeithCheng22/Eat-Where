@@ -160,7 +160,9 @@
         if (newVal) {
             regionSelected.value = ''
             locationSelected.value = ''
+            toast.success("Current location enabled", {timeout: 2500});
         } else {
+            toast.success("Current location disabled", {timeout: 2500});
             regionSelected.value = prevRegionSelected.value
             locationSelected.value = prevLocationSelected.value
         }
