@@ -1,6 +1,7 @@
 <template>
     <div v-if='!isLoading' class="py-10 px-6 max-w-[1000px]">
         <img v-show='reccos.length <= 0' src="../assets/notfound.png" alt="Man puzzled with food" />
+        <Button class="" @click="backButtonClicked" title="Back to form"/>
         <h1 class="font-montserrat text-white text-[2rem] font-bold mb-3 tracking-wider text-center max-[699px]:text-[1.2rem]">{{ reccos.length === 0 ? 'No recommendations available' : 'Here are the reccos!'}}</h1>
         <p v-show='reccos.length <= 0' class="text-center text-white font-poppins">Try adjusting the radius?</p>
         <div class="lg:grid grid-cols-2 gap-3 flex flex-col">
@@ -8,8 +9,6 @@
         </div>
         
         <div class="mt-2">
-          <Button class="float-left mt" @click="backButtonClicked" title="Back to form"/>
-
           <button @click="topFunction" id="top" title="Go to top" aria-label="Back to top" class="float-right">
             <img src="../assets/upArrow.png" width="35" />
           </button>

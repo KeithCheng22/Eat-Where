@@ -1,6 +1,6 @@
 <template>
     <section class="border-2 border-white min-[700px]:flex lg:justify-center p-5 gap-5 rounded-[26px] mb-3 shadow-lg max-[700px]:w-[70%] max-[700px]:mx-auto">
-        <img :src="image_url" class="max-[700px]:aspect-[16/12] aspect-square max-sm:max-w-[200px] sm:max-w-[250px] rounded-lg object-cover object-center" :alt="name"/>
+        <img :src="image_url" class="max-[700px]:aspect-[16/12] aspect-square w-fit sm:max-w-[250px] rounded-lg object-cover object-center" :alt="name"/>
 
         <div class="font-poppins text-white tracking-wider flex flex-col max-[699px]:mt-3 w-fit">
             <h2 class="font-semibold font-montserrat mb-2 max-[699px]:mb-0 max-sm:text-[1.5rem] sm:text-[1rem]">{{ name }}</h2>
