@@ -269,7 +269,7 @@ const handleSubmit = async () => {
         long.value = null;
     }
 
-    const response = await fetch('https://eat-where-server-nf09dbyim-keithcheng22s-projects.vercel.app/getRecco', {
+    const response = await fetch('https://eat-where-server.vercel.app/getRecco', {
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
